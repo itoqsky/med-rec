@@ -1,40 +1,46 @@
-import Layout from './components/layout/Layout';
-import AlertPopup from './components/layout/AlertPopup';
+import Layout from './components/layouts/Layout'
+import AlertPopup from './components/layouts/AlertPopup'
 
-import Home from './pages';
-import Patient from './pages/patient';
-import Doctor from './pages/doctor';
-import HeaderAppBar from './components/HeaderAppBar';
+import Home from './pages'
+import Patient from './pages/patient'
+import Doctor from './pages/doctor'
+import HeaderAppBar from './components/layouts/Layout'
 
 const routes = [
-    {
-        path: '/',
-        component: [
-            {
-                path: '',
-                element: (
-                    <Home />
-                    <AlertPopup />
-                )
-            },
-            {
-                path: 'patient',
-                element: (
-                    <HeaderAppBar />
-                    <AlertPopup />
-                    <Patient /> 
-                )
-            },
-            {
-                path: 'doctor',
-                element: (
-                    <HeaderAppBar />
-                    <AlertPopup />
-                    <Doctor />
-                )
-            }
-        ]
-    }
+  {
+    path: '/',
+    children: [
+      {
+        path: '',
+        element: (
+          <>
+            <AlertPopup />
+            <Home />
+          </>
+        ),
+      },
+      {
+        path: 'patient',
+        element: (
+          <>
+            <HeaderAppBar />
+            <AlertPopup />
+            <Patient />
+          </>
+        ),
+      },
+      {
+        path: 'doctor',
+        element: (
+          <>
+            <HeaderAppBar />
+            <AlertPopup />
+            <Doctor />
+          </>
+        ),
+      },
+    ],
+  },
 ]
 
-export default routes;
+export default routes
