@@ -1,3 +1,6 @@
+import Layout from './components/layout/Layout';
+import AlertPopup from './components/layout/AlertPopup';
+
 import Home from './pages';
 import Patient from './pages/patient';
 import Doctor from './pages/doctor';
