@@ -93,6 +93,7 @@ const Home = () => {
             top: 0,
             left: 0,
             zIndex: -1,
+            backgroundColor: "pink",
           }}
         >
           {/* <VideoCover

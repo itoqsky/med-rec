@@ -1,13 +1,12 @@
 import React from 'react'
 import { Box, Button, Typography } from '@mui/material'
-import { grey, teal } from '@mui/material/colors'
 
 const CustomButton = ({ text, handleClick, disabled = false, children }) => {
   return (
     <Button
       startIcon={children}
       style={{
-        backgroundColor: disabled ? grey[400] : teal['A700'],
+        backgroundColor: '#41006e',
         textTransform: 'none',
         padding: '10px 20px',
       }}

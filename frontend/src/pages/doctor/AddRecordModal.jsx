@@ -1,28 +1,28 @@
-import React, { useState } from 'react'
-import CustomButton from '../../components/CustomButton'
-import { DropzoneAreaBase } from 'material-ui-dropzone'
-import { Box, Chip, IconButton, Typography } from '@mui/material'
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded'
-import useAlert from '../../contexts/AlertContext/useAlert'
+import React, { useState } from 'react';
+import CustomButton from '../../components/CustomButton';
+import { DropzoneAreaBase } from 'material-ui-dropzone';
+import { Box, Chip, IconButton, Typography } from '@mui/material';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import useAlert from '../../contexts/AlertContext/useAlert';
 
 const AddRecordModal = ({ handleClose, handleUpload, patientAddress }) => {
-  const { setAlert } = useAlert()
-  const [file, setFile] = useState(null)
-  const [buffer, setBuffer] = useState(null)
+  const { setAlert } = useAlert();
+  const [file, setFile] = useState(null);
+  const [buffer, setBuffer] = useState(null);
 
   const handleFileChange = fileObj => {
-    const { file } = fileObj
-    setBuffer(null)
-    setFile(file)
-    console.log('file.name :>> ', file.name)
+    const { file } = fileObj;
+    setBuffer(null);
+    setFile(file);
+    console.log('file.name :>> ', file.name);
 
-    const reader = new FileReader()
-    reader.readAsArrayBuffer(file)
+    const reader = new FileReader();
+    reader.readAsArrayBuffer(file);
     reader.onloadend = () => {
-      const buffer = Buffer.from(reader.result)
-      setBuffer(buffer)
-    }
-  }
+      const buffer = Buffer.from(reader.result);
+      setBuffer(buffer);
+    };
+  };
 
   return (
     <Box
@@ -31,13 +31,14 @@ const AddRecordModal = ({ handleClose, handleUpload, patientAddress }) => {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        weight: '100vw',
+        width: '100vw', // fixed typo: weight should be width
+        backgroundColor: 'black', // Set the background color of the whole component to black
       }}
     >
       <Box
         width='50vw'
         style={{
-          backgroundColor: 'white',
+          backgroundColor: '#1e1e1e', // Dark background color for the content area
           boxShadow: 24,
           borderRadius: 10,
         }}
@@ -57,10 +58,14 @@ const AddRecordModal = ({ handleClose, handleUpload, patientAddress }) => {
             <DropzoneAreaBase
               onAdd={fileObjs => handleFileChange(fileObjs[0])}
               onDelete={fileObj => {
-                setFile(null)
-                setBuffer(null)
+                setFile(null);
+                setBuffer(null);
               }}
               onAlert={(message, variant) => setAlert(message, variant)}
+              // Add a class name to style the Dropzone
+              classes={{
+                root: 'dark-dropzone',
+              }}
             />
           </Box>
           <Box display='flex' justifyContent='space-between' mb={2}>
@@ -75,7 +80,7 @@ const AddRecordModal = ({ handleClose, handleUpload, patientAddress }) => {
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default AddRecordModal
+export default AddRecordModal;

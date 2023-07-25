@@ -56,7 +56,9 @@ const Patient = () => {
               )}
               {role === 'patient' && (
                 <>
-                  <Typography variant='h4'>My Records</Typography>
+                  <Typography variant='h4' color='white' style={{ fontWeight: 'bold' }}>
+                    My Records
+                  </Typography>
 
                   {records.length === 0 && (
                     <Box display='flex' alignItems='center' justifyContent='center' my={5}>

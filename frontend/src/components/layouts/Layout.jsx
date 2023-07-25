@@ -11,7 +11,7 @@ const HeaderAppBar = () => {
   } = useEth()
 
   return (
-    <AppBar position='static' style={{ backgroundColor: 'white' }}>
+    <AppBar position='static' style={{ backgroundColor: 'rgba(0, 0, 0, 0.943)' }}>
       <Toolbar>
         <Box display='flex' justifyContent='space-between' alignItems='center' width='100%'>
           <a href='/'>
@@ -23,13 +23,13 @@ const HeaderAppBar = () => {
               <PersonRoundedIcon style={{ color: grey[700], fontSize: '22px' }} />
             </Box>
             <Box ml={0.5} mr={2}>
-              <Typography variant='h6' color='black'>
+              <Typography variant='h6' color='white'>
                 {accounts ? accounts[0] : 'Wallet not connected'}
               </Typography>
             </Box>
             <Chip
               label={role === 'unknown' ? 'not registered' : role}
-              style={{ fontSize: '12px', backgroundColor: teal['A700'], color: 'white' }}
+              style={{ fontSize: '12px', backgroundColor: "rgba(96, 0, 137, 0.953)", color: 'white' }}
             />
           </Box>
         </Box>
