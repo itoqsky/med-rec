@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { EthProvider } from './contexts/EthContext'
 import routes from './routes'
 import { useRoutes } from 'react-router-dom'

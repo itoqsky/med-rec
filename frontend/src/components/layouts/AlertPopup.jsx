@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Alert, Typography } from '@mui/material'
 import useAlert from '../../contexts/AlertContext/useAlert'
 

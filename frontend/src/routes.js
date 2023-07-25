@@ -1,6 +1,8 @@
-import React from 'react';
+// Guards
+import Layout from './components/layouts/Layout'
 import AlertPopup from './components/layouts/AlertPopup'
 
+// Pages
 import Home from './pages'
 import Patient from './pages/patient'
 import Doctor from './pages/doctor'

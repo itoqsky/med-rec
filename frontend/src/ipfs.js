@@ -1,4 +1,4 @@
-const ipfsClient = require('ipfs-http-client');
+const ipfsClient = require('ipfs-http-client')
 
 const projectId = '2DKPh21wsRUiB27R526EOCo4eUV'
 const projectSecret = '1bc14260235b4fb8844b4d86b0113876'
@@ -12,3 +12,5 @@ const ipfs = ipfsClient({
     authorization: auth,
   },
 })
+
+export default ipfs
