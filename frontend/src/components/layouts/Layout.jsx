@@ -1,8 +1,8 @@
-import { AppBar, Chip, Toolbar, Box, Typography } from '@mui/material'
 import React from 'react'
+import { AppBar, Chip, Toolbar, Box, Typography } from '@mui/material'
 import useEth from '../../contexts/EthContext/useEth'
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded'
-import logo from '../../assets/tealNoBG-cropped.png'
+// import logo from '../../assets/tealNoBG-cropped.png'
 import { grey, teal } from '@mui/material/colors'
 
 const HeaderAppBar = () => {
@@ -15,7 +15,7 @@ const HeaderAppBar = () => {
       <Toolbar>
         <Box display='flex' justifyContent='space-between' alignItems='center' width='100%'>
           <a href='/'>
-            <img src={logo} alt='med-chain-logo' style={{ height: 20, weight: 20 }} />
+            {/* <img src={logo} alt='med-chain-logo' style={{ height: 20, weight: 20 }} /> */}
           </a>
           <Box flexGrow={1} />
           <Box display='flex' alignItems='center'>

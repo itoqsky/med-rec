@@ -1,4 +1,4 @@
-import Layout from './components/layouts/Layout'
+import React from 'react';
 import AlertPopup from './components/layouts/AlertPopup'
 
 import Home from './pages'
