@@ -1,4 +1,4 @@
-# Med-rec
+# MedRec
 Blockchain-Based Electronic Medical Records System with Smart Contract
 
 ---
