@@ -3,7 +3,7 @@ Blockchain-Based Electronic Medical Records System with Smart Contract
 
 ---
 
-MedChain utilizes IPFS as its underlying technology, serving as the distributed file system for storing patients' medical records. These records can be accessed by either patients or doctors through interactions with a smart contract deployed on the Ethereum blockchain.
+MedRec utilizes IPFS as its underlying technology, serving as the distributed file system for storing patients' medical records. These records can be accessed by either patients or doctors through interactions with a smart contract deployed on the Ethereum blockchain.
 
 The process begins with the client establishing a connection with MetaMask, followed by utilizing the smart contract to create a patient or doctor block, associated with the respective wallet address.
 
